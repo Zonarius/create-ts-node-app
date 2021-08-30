@@ -43,16 +43,11 @@ const devDependencies = [
 ]
 
 const originalDirectory = process.cwd();
-
 process.chdir(root);
-spawnSync("npm", ["install", "--save", ...dependencies], {
-  stdio: "inherit"
-})
-spawnSync("npm", ["install", "--save-dev", ...devDependencies], {
-  stdio: "inherit"
-})
-spawnSync("npx", ["ts-jest", "config:init"], {
-  stdio: "inherit"
-})
+
+spawnSync("npm", ["install", "--save", ...dependencies], { stdio: "inherit" })
+spawnSync("npm", ["install", "--save-dev", ...devDependencies], { stdio: "inherit" })
+spawnSync("npx", ["ts-jest", "config:init"], { stdio: "inherit" })
+spawnSync("git", ["init"], { stdio: "inherit" })
 
 process.chdir(originalDirectory);
