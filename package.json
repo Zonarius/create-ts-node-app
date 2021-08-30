@@ -1,8 +1,9 @@
 {
-  "name": "create-ts-node-app",
+  "name": "@zonarius/create-ts-node-app",
   "version": "1.0.0",
-  "description": "",
-  "bin": "./index.js",
+  "bin": {
+    "create-ts-node-app": "index.js"
+  },
   "main": "./index.js",
   "repository": {
     "type": "git",
